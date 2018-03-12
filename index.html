@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-1.11.0.min.js"></script>
+    <script src="iPages-1.0.0.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            myPages = new iPage({
+                elem: '#pages',
+                limit: 5, //分页数
+                curr: 1, //初始页
+                count: 200, //数据总数,
+                hidenum:15,
+                topages:true,
+                jump: function(obj, first) {
+                   console.log(obj); 
+                }
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+    <div class="iPages" id="pages"></div>
+</body>
+
+</html>
